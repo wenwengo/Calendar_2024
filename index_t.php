@@ -48,10 +48,15 @@
             align-items: center;
             width: 100%;
         }
-
         .tbody{
-            /* background-color: red; */
-            
+           
+            margin-right:10px;
+        }
+        .tbody > .row{
+            width: 90%;
+            display:link-block;
+            justify-content:space-evenly;
+            justify-content: center;
         }
         .main{
             width: 840px;
@@ -228,18 +233,27 @@
 
                         <div class="tbody nav" >                    
                             <?php
+
                                  foreach($days as $day){
                                      $format=explode("-",$day)[2];
                                      $w=date("w",strtotime($day));
-                                     if($w==0 || $w==6){
-                                    
-                                         echo "<div class='holiday'>$format</div>";
-                                     }else{
-                                    
-                                         echo "<div class='item'>";
-                                         echo "<div class='date'>$format</div>";
-                                         echo "</div>";
+
+                                     if($w==0){
+                                        echo "<div class='row'>";
                                      }
+                                        if($w==0 || $w==6){
+                                        
+                                            echo "<div class='holiday'>$format</div>";
+                                        }else{
+                                        
+                                            echo "<div class='item'>";
+                                            echo "<div class='date'>$format</div>";
+                                            echo "</div>";
+                                        }
+                                     if($w==6){
+                                        echo "</div>";
+                                     }
+                                     
                                  }
                                  echo "</div>";                           
                              ?>
