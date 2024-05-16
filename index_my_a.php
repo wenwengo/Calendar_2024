@@ -29,7 +29,7 @@
            flex-wrap: wrap;
            justify-content: center;
             align-items: center; 
-          
+          width: 850px;
            /* width: 100%;         強制換行 */
            background-color: #eee;
            
@@ -63,7 +63,7 @@
              flex-wrap: wrap;
             /* justify-content:space-evenly; */
             justify-content: space-evenly;;
-            background-color:pink;
+            /* background-color:pink; */
             /* margin-left:5px; */
             width: 100%;
         }
