@@ -18,8 +18,8 @@
            flex-wrap: wrap;
            justify-content:center;
            align-items:center;
-           background-color: pink;
-           width: 840px;
+           /* background-color: #ff00ff; */
+           width: 850px;
            margin:auto;
         }
 
@@ -31,7 +31,7 @@
             align-items: center; 
           
            /* width: 100%;         強制換行 */
-           background-color: #ff00ff;
+           background-color: #eee;
            
         }
 
@@ -39,7 +39,7 @@
         .btn{
             display: flex;
             justify-content: space-between; /* 左右靠邊 平均分散排列 */
-            width: 840px;
+            width: 850px;
         }
         .top{
             display: flex;
@@ -48,18 +48,24 @@
             align-items: center;
             width: 100%;
         }
+        .main{
+            width: 850px;
+        }
+
         .tbody{
-           
-            margin-right:10px;
+            
+            width: 100%;
+
         }
         .tbody > .row{
-            width: 90%;
-            display:link-block;
-            justify-content:space-evenly;
-            justify-content: center;
-        }
-        .main{
-            width: 840px;
+            
+            display:flex;
+             flex-wrap: wrap;
+            /* justify-content:space-evenly; */
+            justify-content: space-evenly;;
+            background-color:pink;
+            /* margin-left:5px; */
+            width: 100%;
         }
 
 
@@ -77,8 +83,7 @@
             margin-left:10px;
             margin-top:10px;
             display:flex;
-            width:100px;
-            height:100px;
+          ;
             background-image: url("https://picsum.photos/id/142/100/150");
             /* border:1px solid lightgreen; */
             position:relative;
@@ -112,7 +117,7 @@
             background:pink;
             margin-left:10px;
             margin-top:10px;
-            display:display:inline-block;flex;
+            display:flex;
             width:100px;
             height:100px;
             background-image: url("https://picsum.photos/id/63/100/150");
@@ -133,8 +138,8 @@
         }
 
         .nav{
-            display:flex;
-            
+           
+            width:100%;
             margin:5px 0;
         }
     </style>
