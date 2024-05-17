@@ -31,28 +31,31 @@
             align-items: center; 
           width: 850px;
            /* width: 100%;         強制換行 */
-           background-color: #eee;
+         
            
         }
 
         /* 副標列 */
-        .btn{
+        .flex-container>.top>.btn{
             display: flex;
             justify-content: space-between; /* 左右靠邊 平均分散排列 */
             width: 850px;
         }
-        .top{
+        .flex-container>.top{
             display: flex;
            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             width: 100%;
         }
-        .main{
+        .flex-container>.main{
             width: 850px;
         }
+        .flex-container>.main>.thead{
+           width:100% ;
+        }
 
-        .tbody{
+        .flex-container>.main>.tbody{
             
             width: 100%;
 
@@ -108,7 +111,9 @@
             /* border:1px solid lightgreen; */
             text-align: center;
             /* background-color: darkgreen;  */
-            color:lightgreen
+            
+            color:lightgreen;font-family:'Noto Sans TC';text-shadow: 0 0 0.2em #444, 0 0 0.2em #87F, 0 0 0.2em #87F;
+            font-size:27px;
            
         }
 
@@ -195,16 +200,19 @@
                              
                              <div class="btn">
                                   <div class="nav" >
-                                      <a href="index_t.php?year=<?=$prev_year;?>&month=<?=$prev;?>">上一個月</a>                    
+                                      <a href="index_my_a.php?year=<?=$prev_year;?>&month=<?=$prev;?>" style="color:#000;font-family:'Noto Sans TC';text-shadow: 0 0 0.2em #444, 0 0 0.2em #87F, 0 0 0.2em #87F">上一個月</a>                    
+                                  </div>
+
+                                  <div class="nav" style="color:#000;font-family:'Noto Sans TC';text-shadow: 0 0 0.2em #444, 0 0 0.2em #87F, 0 0 0.2em #87F">
+
+                                      <!-- <?=$year;?>年 <?=$month;?>月 -->
+                                      
+                                      <input type="month" value="<?=$year;?>-<?=$month;?>" name="" ></input>
+
                                   </div>
 
                                   <div class="nav" >
-
-                                      <?=$year;?>年 <?=$month;?>月
-                                  </div>
-
-                                  <div class="nav" >
-                                      <a href="index_t.php?year=<?=$next_year;?>&month=<?=$next;?>">下一個月</a>
+                                      <a href="index_my_a.php?year=<?=$next_year;?>&month=<?=$next;?>" style="color:#000;font-family:'Noto Sans TC';text-shadow: 0 0 0.2em #444, 0 0 0.2em #87F, 0 0 0.2em #87F">下一個月</a>
 
                                   </div>
                              </div>
@@ -224,7 +232,7 @@
                         <div class="thead" >
                             <?php
 
-                                //  echo "<div class='block-table'>";
+                                
                                  echo "<div class='item-header'>日</div>";
                                  echo "<div class='item-header'>一</div>";
                                  echo "<div class='item-header'>二</div>";
@@ -252,7 +260,8 @@
                                         }else{
                                         
                                             echo "<div class='item'>";
-                                            echo "<div class='date'>$format</div>";
+                                            echo "<div class='date'
+                                            >$format</div>";
                                             echo "</div>";
                                         }
                                      if($w==6){
