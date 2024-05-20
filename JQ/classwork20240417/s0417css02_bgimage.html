@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Background Image</title>
+    <style>
+        .boximg {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            background-image: url(https://picsum.photos/id/35/300/200);
+            background-repeat: no-repeat;
+            /* 圖 填版方式（圖佔版面的方式） */
+
+            background-position: right top;
+            /* 圖 對齊方式 */
+
+            opacity: 0.1;
+            /* 圖 透明度 */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--圖片  方式1  -->
+    <h3>img</h3>
+    <img src="https://picsum.photos/id/35/300/200" alt="">
+    <br>
+    <hr>
+    <img src="" alt="">
+
+    <!-- 圖片 方法2 -->
+    <h3>bg image</h3>
+    <div class="boximg">
+        <h2>When using a background image, use an image that does not disturb the text.</h2>
+    </div>
+</body>
+
+</html>

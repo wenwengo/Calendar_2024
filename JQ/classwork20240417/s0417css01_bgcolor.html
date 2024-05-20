@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Background color</title>
+    <style>
+        * {}
+
+        body {
+            background-color: lightblue;
+        }
+
+        .container {
+            background-color: lightpink;
+            width: 80%;
+            height: 100vh;
+            margin: auto
+        }
+
+        table {
+            background-color: lightyellow;
+            width: 80%;
+
+        }
+
+        th,
+        tr,
+        td {
+            width: 50vw; // vw和%效果一樣，px為像素
+            /*  */
+            height: 10vh; //山崱高度若其父層table未設定高度時而卻使用%，會被默認為1，此時有效單位只能用像素px或hv。
+        }
+
+        td>div {
+            width: 300px;
+            ;
+            height: ;
+            background-color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <table>
+        <div class="container">
+            <tr>
+                <td width="80%">1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+    </table>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線性漸層</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(red, orange, yellow);
+            /*  */
+            /* 顏色指定的數量沒有上限，規定只要兩個以上即符合 */
+            /* 可設定漸層的角度 ，預設是由上到下*/
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(to bottom right, red, orange, yellow);
+            /* 角度或方向單字要放在括弧內的第一個位置 
+               使用方向單字需加to在其前方,方向可疊用
+               角度不用加to
+
+               to top =0ddeg (360deg)
+               to right =90deg
+               to bottom= 180deg
+               to bottom right =180+90
+               to left =270deg
+
+            */
+        }
+
+        .div3 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(red 80%, orange, yellow);
+            /* 可調整顏色佔漸層的比例 
+            漸變位置可用百份比或px
+            linear-gradient(顏色1 漸變位置, 顏色2 漸變位置...)
+
+            */
+        }
+
+
+        .div4 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(45deg, purple 10%, pink 10%, pink 90%, purple 90%);
+            /*  如果漸變位置相同，會有明顯的分隔線
+            linear-gradient(45deg, purple 10%, pink 10%, pink 90%, purple 90%);
+            ↑上述括弧內為設定起迄點的方式。
+            ※當指定的漸層總合有填滿時，可省略了0%及100%（單位使用px亦同），但若未能填滿時需指定起始點0及最終點
+            即：向上45度進行線性並指定purple 0%~10%且pink10%~90%且purple90%~100%
+
+
+            */
+        }
+
+        .div5 {
+            width: 300px;
+            height: 300px;
+
+            background-image: repeating-linear-gradient(red, orange 10%);
+            /* 重複漸層  repeating
+            如果漸層不夠大，會重複已定義的漸層填滿區域
+            */
+        }
+
+
+        .div6 {
+            width: 300px;
+            height: 300px;
+            /* background-image: radial-gradient(circle 50px at 450px 50px, red, orange); */
+            background-image: radial-gradient(circle farthest-corner at 450px 50px, red, orange);
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 80%;
+            height: 90vh;
+            background-color: #ccc;
+            margin:auto;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            /* ↓此本容器內的子物件(不含孫物件)會相對於本容器，水平(視主軸方向而定)置中 */
+            justify-content: space-around;
+                /* ↓此本容器內的子物件(不含孫物件)會相對於本容器，垂直(視與主軸郵直的方向而定)置中 */
+            align-items: center;
+            /* ↓預設主軸為橫向。若column則主軸為直向 */
+            flex-direction: row;
+            /* ↓多行時換行 */
+            flex-wrap: wrap;
+
+            width: 80%;
+            height: 90%;            
+            background-color: lightblue;
+            margin:auto;
+
+        }
+
+        .flex-item{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+            /* ↓用此三列容器轉為flexbox屬性後，可將容器內其子物件水平及垂直皆置中*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-item-hide{
+            /* 此容器內的子物件透明度為0 */
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+
+        <div class="flex-container">
+            <div class="flex-item">
+                1
+            </div>
+
+            <div class="flex-item">
+                2
+            </div>           
+ 
+            <div class="flex-item">
+                3
+            </div>
+
+            <div class="flex-item">
+                4
+            </div>
+
+       
+
+            <div class="flex-item">
+                5
+            </div>
+
+            <div class="flex-item-hide">
+                6
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

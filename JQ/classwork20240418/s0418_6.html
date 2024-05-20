@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動畫</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background: gray;
+            animation: move 5s linear 0s 1 normal backwards;
+            /* 參數解說如下（nimation的參數以空白隔開非頭畫）：        
+            name        動畫名稱（目前未知）
+            duration    動畫長度，必需有冒號
+            timing-function 例如l
+                            inear  
+                            ease   
+                            step-start一格一格播放但跳過起始格 
+                            step-end一格一格播放但跳過終點格 
+                            steps(此處放數字為關鍵影格切幾格,此處次放start或end作用參考上兩列)
+                            ..等
+            delay       延遲
+            iteration-count 播放次數 （可為數字或使用infinite使其無限播放）
+            direction       方向
+                    （normal正常
+                    reverse倒帶播放
+                    alternate播過去再播回來
+                    alternate-reverse播回來再播過去）
+            fill-mode       動畫結束後停在哪裡（none 為回到原始狀態，forwards停在最後一幀，backwards停在開始，both依照次數和方向自動判斷）
+            */
+        }
+
+        .div1:hover {
+            /* 動畫播放狀態 */
+            animation-play-state: paused;
+            /* 此處設為滑鼠移到其上方動畫暫停 */
+        }
+
+        /* @keyframes為關鍵影格，用來設定動畫使用 */
+        @keyframes move {
+
+            /* 0%也可寫from */
+            0% {
+                left: 0px;
+            }
+
+            /*  100%也可寫 to */
+            100% {
+                left: 500px;
+            }
+
+
+            25% {
+                left: 125px
+            }
+
+            50% {
+                left: 250px
+            }
+
+            75% {
+                left: 375px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="div1">
+
+</div>
+
+</html>

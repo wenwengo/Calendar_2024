@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            margin: auto;
+            /* margin-top: 50px; */
+            width: 80%;
+            height:90vh ;
+            background-color: darkgreen;
+            /* padding-top: 50px; */
+        }
+
+        .flex-container{
+            display: flex;
+
+            /* 例用margin:auto特性，造成水平置中 */
+            margin: auto; 
+            
+            /* 多行換行。（預設flex-wrap: nowrap;預設不換行） */
+            flex-wrap: wrap;
+
+            /* 水平分散置中 */
+            justify-content: space-around;
+
+            /* 垂直置中 */
+
+
+            width:80% ;
+            height: 80%;
+            background-color:lightblue;
+            
+            
+            /* flex-wrap: wrap;
+           
+            justify-content:space-around;
+            align-items: center; */
+            
+        }
+
+        .item{
+            width: 30%;
+            height: 150px;
+            background-color: #ccc;
+        } 
+        .item-hide {
+            /* opacity: 0.3; */
+        }
+
+        .item>img {
+            width: 100%;
+            height: 100%;
+            border: 3px solid black;
+        }
+        .item-text{
+            padding-top: 66px;
+        }
+
+        .item:hover{
+            width: 33%;
+            height:155px;
+
+            /* 轉場效果時間 */
+            transform;:0.5s
+        }
+    </style>
+
+
+</head>
+<body><body>
+    <!-- 九宮格 -->
+
+    <div class="contaicon">
+            <div class="flex-container">
+
+                <div class="itme">
+                    <img src="https://picsum.photos/id/237/400/300" alt="" srcset="">
+            
+                </div>
+                <div class="itme">
+                    <img src="https://picsum.photos/id/37/400/300" alt="" srcset="">
+            
+                </div>
+                <div class="itme">
+                    <img src="https://picsum.photos/id/27/400/300" alt="" srcset="">
+            
+                </div>
+
+                <div class="itme">
+                    <img src="https://picsum.photos/id/77/400/300" alt="" srcset="">
+            
+                </div>
+                <div class="itme">
+                    <img src="https://picsum.photos/id/67/400/300" alt="" srcset="">
+            
+                </div>
+                <div class="itme">
+                    <img src="https://picsum.photos/id/70/400/300" alt="" srcset="">
+            
+                </div>
+
+            
+            </div>
+    </div>
+</body>
+</html>

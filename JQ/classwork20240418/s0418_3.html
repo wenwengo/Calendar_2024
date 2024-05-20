@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圓錐漸層</title>
+
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(red, orange);
+            /* 圓錐漸層，*/
+            /* 可放置百分比及可放置角度 */
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(red 80%, orange);
+            /* 圓錐漸層，*/
+            /* 可放置百分比及可放置角度 */
+        }
+
+        .div3 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(red 50%, orange 50%);
+
+
+        }
+
+        .div4 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(at right top, red, orange);
+            /* 可放置百分比及可放置角度，控制漸變開始的角度 */
+            /* 圓錐漸層的中心點可移動，但參數需下在括弧內的最前方，例如at right top移到右上角
+             */
+
+        }
+
+        .div5 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(from 90deg, red, orange);
+            /* 可放置百分比及可放置角度，控制漸變開始的角度 */
+            /* 圓錐漸層的開始的方向可轉動，但參數需下在括弧內的最前方，例如from 90deg,從右方開始 */
+
+        }
+
+
+        .div6 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(from 90deg at right top, red, orange);
+            /* 上述4、5可混合設定（先frome再at） */
+
+        }
+
+
+        .div7 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-conic-gradient(black 0deg, red 22.5deg, black 22.5deg, red 45deg);
+        }
+
+        .div8 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-conic-gradient(black 0deg, black 22.5deg, red 22.5deg, red 45deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+</body>
+
+</html>

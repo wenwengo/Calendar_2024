@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 50%;
+            /* text-align: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 無語意的block -->
+    <div class="container">
+        <form action="" method="get">
+            <fieldset>
+                <legend>hr fieldset:</legend>
+
+                <p>
+                    <label for="name">name</label>
+                    <input type="text" name="" id="name">
+                </p>
+
+                <p>
+                    <label for="price">price</label>
+                    <input type="number" name="" id="price">
+                </p>
+
+                <p>
+                    <input type="submit" value="submit">
+                </p>
+
+                <!-- input : text 文字輸入-->
+                <!-- input : number 數字輸入-->
+
+                <hr>
+                <!-- input :text => select 下拉選單-->
+                <label for="mySelect">level</label>
+                <select name="" id="mySelect">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+
+                <hr>
+                <!-- radio 單選-->
+                the best book
+                <label for="book">love</label><br>
+                <input type="radio" name="book" id="" value="小紅帽">
+                <label for="">小紅帽</label>
+                <input type="radio" name="book" id="" value="思考致富">
+                <label for="">思考致富</label>
+                <input type="radio" name="book" id="" value="富爸爸窮爸爸">
+                <label for="">富爸爸窮爸爸</label>
+                <hr>
+                loves
+                <!-- checkbox 多選 -->
+                <label for="">love</label><br>
+                <input type="checkbox" name="love[]" id="" value="html/css">
+                <label for="">html/css</label>
+                <input type="checkbox" name="love[]" id="" value="js">
+                <label for="">js</label>
+                <input type="checkbox" name="love[]" id="" value="php">
+                <label for="">php</label>
+
+                <hr>
+                <label for="date">date</label>
+                <input type="date" name="" id="" value="2024-04-02">
+
+                <!-- textarea 多行文字 -->
+                <hr>
+                <textarea name="" id="" cols="30" rows="10">
+
+                </textarea>
+            </fieldset>
+
+
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

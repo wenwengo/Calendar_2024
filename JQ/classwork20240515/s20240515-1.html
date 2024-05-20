@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="red">
+        red
+    </div>
+
+    <div id="green">
+        green
+    </div>
+
+    <div id="blue">
+        blue
+    </div>
+
+    <!-- js or jquery -->
+    <script>
+        // 方法一
+        $(document).ready(function () {
+            $('#red').css('color','red');
+            $('#red').css('background-color','#ccc');
+
+            $('#green').css('color','green');
+            $('#blue').css('color','blue');
+        });
+
+
+    </script>
+</body>
+</html>

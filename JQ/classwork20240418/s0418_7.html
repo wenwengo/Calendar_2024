@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景漸層動畫</title>
+    <!-- 原理為設一個漸層背景圖為400%*400%大小，將螢幕大小固定在100vw 100vh -->
+    <style>
+        body {
+            margin: 0;
+            background-image: linear-gradient(90deg, rgb(209, 0, 255), rgb(0, 249, 255));
+            background-size: 400% 400%;
+            width: 100 vw;
+            height: 500 vh;
+
+
+            animation: move 15s ease infinite;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

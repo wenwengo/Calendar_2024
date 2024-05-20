@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放射漸層</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red, orange);
+            /* 放謝漸層，預設為由內往外放謝 */
+
+
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 70%, orange);
+        }
+
+        .div3 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 50%, orange 50%);
+            /* 放謝漸層，預設為由內往外放謝 */
+
+        }
+
+        .div4 {
+            width: 300px;
+            height: 300px;
+
+            /* 形狀 尺寸 at位置,顏色... 
+            形狀共有 circle(圓形) ellipse(隋圓形)
+            circle尺寸：一個參數,當半徑
+                    radial-gradient(ellipse 寬 高 at left top to, 顏色1, 顏色2...);
+                    radial-gradient(ellipse 寬 高 at 自左算起的數字px 自上算起的數字px, 顏色1, 顏色2...);
+            ellipse尺寸：兩個參數，代表寬高
+            */
+            background-image: radial-gradient(ellipse 100px 50px at 100px, red, pink);
+            /* 放射漸層不同之處在於，可指定開始放射的中心點位置，但不可轉角度*/
+
+        }
+
+        .div5 {
+            width: 500px;
+            height: 300px;
+            background-image: radial-gradient(circle 20px at 450px 50px, red 50%, orange 50%);
+            /* background-image: radial-gradient(circle 20px at right top, red 50%, orange 50%); */
+            /* 放射漸層 
+            closest-corner  最近的角
+            closest-side    最近的邊
+            farthest-corner 最遠的角
+            farthest-side   最遠的邊
+            
+            
+            */
+
+            background-image: radial-gradient(circle farthest-corner at 450px 50px, red, orange);
+        }
+
+        .div6 {
+            width: 500px;
+            height: 300px;
+            background-image: repeating-radial-gradient(gray, black 40px)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+</body>
+
+</html>
